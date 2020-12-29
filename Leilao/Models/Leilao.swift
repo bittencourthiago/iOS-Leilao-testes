@@ -24,11 +24,16 @@ class Leilao {
         
         guard let listaDeLances = lances else { return }
 
-        if listaDeLances.count == 0 || listaDeLances.last?.usuario != lance.usuario {
+        if listaDeLances.count == 0 || ultimoLance(listaDeLances).usuario != lance.usuario {
            
             lances?.append(lance)
             
         }
+    }
+    private func ultimoLance(_ lances:[Lance]) -> Lance {
+        
+        return lances[lances.count-1]
         
     }
+    
 }
