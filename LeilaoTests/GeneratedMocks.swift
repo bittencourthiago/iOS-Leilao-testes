@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Leilao/Dao/LeilaoDao.swift at 2021-01-06 19:34:32 +0000
+// MARK: - Mocks generated from file: Leilao/Dao/LeilaoDao.swift at 2021-01-06 19:52:27 +0000
 
 //
 //  LeilaoDao.swift
@@ -223,7 +223,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: Leilao/Models/Avaliador.swift at 2021-01-06 19:34:32 +0000
+// MARK: - Mocks generated from file: Leilao/Models/Avaliador.swift at 2021-01-06 19:52:27 +0000
 
 //
 //  Avaliador.swift
@@ -257,6 +257,54 @@ import Foundation
     }
     
 
+    
+    
+    
+     override var maiorDeTodos: Double {
+        get {
+            return cuckoo_manager.getter("maiorDeTodos",
+                superclassCall:
+                    
+                    super.maiorDeTodos
+                    ,
+                defaultCall: __defaultImplStub!.maiorDeTodos)
+        }
+        
+        set {
+            cuckoo_manager.setter("maiorDeTodos",
+                value: newValue,
+                superclassCall:
+                    
+                    super.maiorDeTodos = newValue
+                    ,
+                defaultCall: __defaultImplStub!.maiorDeTodos = newValue)
+        }
+        
+    }
+    
+    
+    
+     override var menorDeTodos: Double {
+        get {
+            return cuckoo_manager.getter("menorDeTodos",
+                superclassCall:
+                    
+                    super.menorDeTodos
+                    ,
+                defaultCall: __defaultImplStub!.menorDeTodos)
+        }
+        
+        set {
+            cuckoo_manager.setter("menorDeTodos",
+                value: newValue,
+                superclassCall:
+                    
+                    super.menorDeTodos = newValue
+                    ,
+                defaultCall: __defaultImplStub!.menorDeTodos = newValue)
+        }
+        
+    }
     
 
     
@@ -331,6 +379,16 @@ import Foundation
 	    }
 	    
 	    
+	    var maiorDeTodos: Cuckoo.ClassToBeStubbedProperty<MockAvaliador, Double> {
+	        return .init(manager: cuckoo_manager, name: "maiorDeTodos")
+	    }
+	    
+	    
+	    var menorDeTodos: Cuckoo.ClassToBeStubbedProperty<MockAvaliador, Double> {
+	        return .init(manager: cuckoo_manager, name: "menorDeTodos")
+	    }
+	    
+	    
 	    func avalia<M1: Cuckoo.Matchable>(leilao: M1) -> Cuckoo.ClassStubNoReturnThrowingFunction<(Leilao)> where M1.MatchedType == Leilao {
 	        let matchers: [Cuckoo.ParameterMatcher<(Leilao)>] = [wrap(matchable: leilao) { $0 }]
 	        return .init(stub: cuckoo_manager.createStub(for: MockAvaliador.self, method: "avalia(leilao: Leilao) throws", parameterMatchers: matchers))
@@ -365,6 +423,16 @@ import Foundation
 	    }
 	
 	    
+	    
+	    var maiorDeTodos: Cuckoo.VerifyProperty<Double> {
+	        return .init(manager: cuckoo_manager, name: "maiorDeTodos", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
+	    
+	    var menorDeTodos: Cuckoo.VerifyProperty<Double> {
+	        return .init(manager: cuckoo_manager, name: "menorDeTodos", callMatcher: callMatcher, sourceLocation: sourceLocation)
+	    }
+	    
 	
 	    
 	    @discardableResult
@@ -396,6 +464,26 @@ import Foundation
 
  class AvaliadorStub: Avaliador {
     
+    
+     override var maiorDeTodos: Double {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (Double).self)
+        }
+        
+        set { }
+        
+    }
+    
+    
+     override var menorDeTodos: Double {
+        get {
+            return DefaultValueRegistry.defaultValue(for: (Double).self)
+        }
+        
+        set { }
+        
+    }
+    
 
     
 
@@ -419,7 +507,7 @@ import Foundation
 }
 
 
-// MARK: - Mocks generated from file: Leilao/Models/Carteiro.swift at 2021-01-06 19:34:32 +0000
+// MARK: - Mocks generated from file: Leilao/Models/Carteiro.swift at 2021-01-06 19:52:27 +0000
 
 //
 //  Carteiro.swift
@@ -519,6 +607,112 @@ import Foundation
 
     
      override func envia(_ leilao: Leilao)   {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+}
+
+
+// MARK: - Mocks generated from file: Leilao/Models/RepositorioDePagamento.swift at 2021-01-06 19:52:27 +0000
+
+//
+//  RepositorioDePagamento.swift
+//  Leilao
+//
+//  Created by Thiago Bittencourt Coelho on 06/01/21.
+//  Copyright © 2021 Alura. All rights reserved.
+//
+
+import Cuckoo
+@testable import Leilao
+
+import Foundation
+
+
+ class MockRepositorioDePagamento: RepositorioDePagamento, Cuckoo.ClassMock {
+    
+     typealias MocksType = RepositorioDePagamento
+    
+     typealias Stubbing = __StubbingProxy_RepositorioDePagamento
+     typealias Verification = __VerificationProxy_RepositorioDePagamento
+
+     let cuckoo_manager = Cuckoo.MockManager.preconfiguredManager ?? Cuckoo.MockManager(hasParent: true)
+
+    
+    private var __defaultImplStub: RepositorioDePagamento?
+
+     func enableDefaultImplementation(_ stub: RepositorioDePagamento) {
+        __defaultImplStub = stub
+        cuckoo_manager.enableDefaultStubImplementation()
+    }
+    
+
+    
+
+    
+
+    
+    
+    
+     override func salva(_ pagamento: Pagamento)  {
+        
+    return cuckoo_manager.call("salva(_: Pagamento)",
+            parameters: (pagamento),
+            escapingParameters: (pagamento),
+            superclassCall:
+                
+                super.salva(pagamento)
+                ,
+            defaultCall: __defaultImplStub!.salva(pagamento))
+        
+    }
+    
+
+	 struct __StubbingProxy_RepositorioDePagamento: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	     init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    func salva<M1: Cuckoo.Matchable>(_ pagamento: M1) -> Cuckoo.ClassStubNoReturnFunction<(Pagamento)> where M1.MatchedType == Pagamento {
+	        let matchers: [Cuckoo.ParameterMatcher<(Pagamento)>] = [wrap(matchable: pagamento) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockRepositorioDePagamento.self, method: "salva(_: Pagamento)", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	 struct __VerificationProxy_RepositorioDePagamento: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	     init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	
+	    
+	    @discardableResult
+	    func salva<M1: Cuckoo.Matchable>(_ pagamento: M1) -> Cuckoo.__DoNotUse<(Pagamento), Void> where M1.MatchedType == Pagamento {
+	        let matchers: [Cuckoo.ParameterMatcher<(Pagamento)>] = [wrap(matchable: pagamento) { $0 }]
+	        return cuckoo_manager.verify("salva(_: Pagamento)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+}
+
+ class RepositorioDePagamentoStub: RepositorioDePagamento {
+    
+
+    
+
+    
+     override func salva(_ pagamento: Pagamento)   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
