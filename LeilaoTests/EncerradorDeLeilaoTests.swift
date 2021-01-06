@@ -13,13 +13,20 @@ import Cuckoo
 class EncerradorDeLeilaoTests: XCTestCase {
     
     var formatador:DateFormatter!
-
+    var encerradorDeLeilao:EncerradorDeLeilao!
+    var daoFalso:MockLeilaoDao!
+    
     override func setUp() {
         super.setUp()
         
         formatador = DateFormatter()
         formatador.dateFormat = "yyyy/MM/dd"
         
+        let daoFalso = MockLeilaoDao().withEnabledSuperclassSpy()
+        
+        let carteiroFalso = MockCarteiro().withEnabledSuperclassSpy()
+        
+        encerradorDeLeilao = EncerradorDeLeilao(daoFalso, Carteiro())
     }
 
     override func tearDown() {
@@ -43,7 +50,6 @@ class EncerradorDeLeilaoTests: XCTestCase {
             when(daoFalso.correntes()).thenReturn(leiloesAntigos)
         }
         
-        let encerradorDeLeilao = EncerradorDeLeilao(daoFalso)
         encerradorDeLeilao.encerra()
         
         guard let statusTvLed = tvLed.isEncerrado() else { return }
@@ -59,7 +65,6 @@ class EncerradorDeLeilaoTests: XCTestCase {
     
         let tvLed = CriadorDeLeilao().para(descricao: "TV LED").naData(data: dataAntiga).constroi()
         
-        let daoFalso = MockLeilaoDao().withEnabledSuperclassSpy()
         
         stub(daoFalso) { (daoFalso) in
             
@@ -67,9 +72,9 @@ class EncerradorDeLeilaoTests: XCTestCase {
             when(daoFalso).correntes().thenReturn([tvLed])
         }
         
-        let encerradorDeLeilao = EncerradorDeLeilao(daoFalso)
         encerradorDeLeilao.encerra()
         
+        //verifica se o metodo atualiza esta sendo chamado
         verify(daoFalso).atualiza(leilao: tvLed)
         
     }

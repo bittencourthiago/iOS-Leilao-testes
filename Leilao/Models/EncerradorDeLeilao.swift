@@ -12,9 +12,12 @@ class EncerradorDeLeilao {
     
     private var total = 0
     private var dao:LeilaoDao
+    private var carteiro:Carteiro
     
-    init(_ leilaoDao:LeilaoDao) {
+    
+    init(_ leilaoDao:LeilaoDao, _ carteiro:Carteiro) {
         self.dao = leilaoDao
+        self.carteiro = carteiro
     }
     
     func encerra() {
@@ -26,6 +29,7 @@ class EncerradorDeLeilao {
                 
                 //salva no banco de dados
                 dao.atualiza(leilao: leilao)
+                carteiro.envia(leilao)
             }
         }
     }
