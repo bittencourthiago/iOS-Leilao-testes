@@ -33,6 +33,7 @@
 		F023C80725A634750063F956 /* Pagamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = F023C80625A634750063F956 /* Pagamento.swift */; };
 		F023C80925A635100063F956 /* RepositorioDePagamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = F023C80825A635100063F956 /* RepositorioDePagamento.swift */; };
 		F023C80B25A635C30063F956 /* GeradorDePagamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = F023C80A25A635C30063F956 /* GeradorDePagamento.swift */; };
+		F023C80D25A637B10063F956 /* GeradorDePagamentoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F023C80C25A637B10063F956 /* GeradorDePagamentoTests.swift */; };
 		F0B4425D25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4425C25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		F023C80625A634750063F956 /* Pagamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagamento.swift; sourceTree = "<group>"; };
 		F023C80825A635100063F956 /* RepositorioDePagamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorioDePagamento.swift; sourceTree = "<group>"; };
 		F023C80A25A635C30063F956 /* GeradorDePagamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeradorDePagamento.swift; sourceTree = "<group>"; };
+		F023C80C25A637B10063F956 /* GeradorDePagamentoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeradorDePagamentoTests.swift; sourceTree = "<group>"; };
 		F0B4425C25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncerradorDeLeilaoTests.swift; sourceTree = "<group>"; };
 		F712E29B1BE9A2A8745A94E1 /* Pods-LeilaoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeilaoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeilaoTests/Pods-LeilaoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 				03FA4B0A209353290047D61B /* Info.plist */,
 				F0B4425C25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift */,
 				F000131225A601C000ADF3FE /* GeneratedMocks.swift */,
+				F023C80C25A637B10063F956 /* GeradorDePagamentoTests.swift */,
 			);
 			path = LeilaoTests;
 			sourceTree = "<group>";
@@ -473,7 +476,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Dao/LeilaoDao.swift\" \\\n\"${INPUT_DIR}/Models/Carteiro.swift\" \n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Dao/LeilaoDao.swift\" \\\n\"${INPUT_DIR}/Models/Carteiro.swift\" \\\n\"${INPUT_DIR}/Models/Avaliador.swift\" \n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -504,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F023C80D25A637B10063F956 /* GeradorDePagamentoTests.swift in Sources */,
 				F0B4425D25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift in Sources */,
 				03FA4B09209353290047D61B /* LeilaoTests.swift in Sources */,
 				A23F5A11209CD8FA000E6525 /* AvaliadorTests.swift in Sources */,

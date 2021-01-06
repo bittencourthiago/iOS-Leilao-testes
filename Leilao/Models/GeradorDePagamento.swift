@@ -28,7 +28,7 @@ class GeradorDePagamento {
             
             let novoPagamento = Pagamento(avaliador.maiorLance(), Date())
             
-            RepositorioDePagamento.salva(novoPagamento)
+            repositorioDePagamento.salva(novoPagamento)
         }
         
     }
