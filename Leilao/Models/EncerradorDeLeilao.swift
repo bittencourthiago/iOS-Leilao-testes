@@ -28,8 +28,13 @@ class EncerradorDeLeilao {
                 total+=1
                 
                 //salva no banco de dados
-                dao.atualiza(leilao: leilao)
-                carteiro.envia(leilao)
+                
+                do {
+                    try dao.atualiza(leilao: leilao)
+                    carteiro.envia(leilao)
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
         }
     }

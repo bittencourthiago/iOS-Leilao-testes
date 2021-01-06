@@ -15,18 +15,19 @@ class EncerradorDeLeilaoTests: XCTestCase {
     var formatador:DateFormatter!
     var encerradorDeLeilao:EncerradorDeLeilao!
     var daoFalso:MockLeilaoDao!
+    var carteiroFalso:MockCarteiro!
     
     override func setUp() {
-        super.setUp()
+        
         
         formatador = DateFormatter()
         formatador.dateFormat = "yyyy/MM/dd"
         
-        let daoFalso = MockLeilaoDao().withEnabledSuperclassSpy()
+        daoFalso = MockLeilaoDao().withEnabledSuperclassSpy()
         
-        let carteiroFalso = MockCarteiro().withEnabledSuperclassSpy()
+        carteiroFalso = MockCarteiro().withEnabledSuperclassSpy()
         
-        encerradorDeLeilao = EncerradorDeLeilao(daoFalso, Carteiro())
+        encerradorDeLeilao = EncerradorDeLeilao(daoFalso, carteiroFalso)
     }
 
     override func tearDown() {
@@ -78,7 +79,27 @@ class EncerradorDeLeilaoTests: XCTestCase {
         verify(daoFalso).atualiza(leilao: tvLed)
         
     }
-
+    
+    func testDeveContinuarAExecucaoMesmoQuandoDaoFalha() {
+        guard let dataAntiga = formatador.date(from: "2020/12/29") else { return }
+        
+        let tvLed = CriadorDeLeilao().para(descricao: "TV LED").naData(data: dataAntiga).constroi()
+        let geladeira = CriadorDeLeilao().para(descricao: "Geladeira").naData(data: dataAntiga).constroi()
+        
+        let error = NSError(domain: "Error", code: 0, userInfo: nil)
+        
+        
+        stub(daoFalso) { (daoFalso) in
+            when(daoFalso).correntes().thenReturn([tvLed, geladeira])
+            when(daoFalso.atualiza(leilao: tvLed)).thenThrow(error)
+        }
+        encerradorDeLeilao.encerra()
+        
+        verify(daoFalso).atualiza(leilao: geladeira)
+        verify(carteiroFalso).envia(geladeira)
+        
+    }
+    
 }
 
 extension Leilao:Matchable {
