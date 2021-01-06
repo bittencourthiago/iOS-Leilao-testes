@@ -1,2 +1,2 @@
 # iOS-TDD-Leilao
-App de leilão para estudo de TDD no curso da Alura
+App de leilão para estudo de TDD e mock na da Alura
