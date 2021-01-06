@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Leilao/Dao/LeilaoDao.swift at 2021-01-06 16:27:14 +0000
+// MARK: - Mocks generated from file: Leilao/Dao/LeilaoDao.swift at 2021-01-06 16:46:39 +0000
 
 //
 //  LeilaoDao.swift

@@ -23,6 +23,8 @@ class EncerradorDeLeilao {
             if comecouSemanaPassada(leilao) {
                 leilao.encerra()
                 total+=1
+                
+                //salva no banco de dados
                 dao.atualiza(leilao: leilao)
             }
         }
