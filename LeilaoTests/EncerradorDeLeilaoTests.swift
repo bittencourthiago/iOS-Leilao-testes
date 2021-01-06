@@ -42,8 +42,6 @@ class EncerradorDeLeilaoTests: XCTestCase {
         let encerradorDeLeilao = EncerradorDeLeilao(daoFalso)
         encerradorDeLeilao.encerra()
         
-        let leiloesEncerrados = daoFalso.encerrados()
-        
         guard let statusTvLed = tvLed.isEncerrado() else { return }
         guard let statusGeladeira = geladeira.isEncerrado() else { return }
         

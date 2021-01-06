@@ -312,13 +312,16 @@
 				TargetAttributes = {
 					03FA4AEC209353270047D61B = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 					};
 					03FA4B03209353290047D61B = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 03FA4AEC209353270047D61B;
 					};
 					03FA4B0E209353290047D61B = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 03FA4AEC209353270047D61B;
 					};
 				};
@@ -666,7 +669,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Leilao/Header.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -688,7 +691,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Leilao/Header.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -709,7 +712,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = apps.LeilaoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leilao.app/Leilao";
 			};
@@ -731,7 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = apps.LeilaoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leilao.app/Leilao";
 			};
@@ -752,7 +755,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = apps.LeilaoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Leilao;
 			};
@@ -773,7 +776,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = apps.LeilaoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Leilao;
 			};
