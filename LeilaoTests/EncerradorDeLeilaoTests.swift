@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import Leilao
+import Cuckoo
 
 class EncerradorDeLeilaoTests: XCTestCase {
 
@@ -23,23 +24,32 @@ class EncerradorDeLeilaoTests: XCTestCase {
         
         formatador.dateFormat = "yyyy/MM/dd"
         
-        guard let dataAntiga = formatador.date(from: "2018/05/09") else { return }
+        guard let dataAntiga = formatador.date(from: "2020/12/29") else { return }
         
         let tvLed = CriadorDeLeilao().para(descricao: "TV LED").naData(data: dataAntiga).constroi()
         let geladeira = CriadorDeLeilao().para(descricao: "Geladeira").naData(data: dataAntiga).constroi()
         
-        let dao = MockLeilaoDao()
+        let leiloesAntigos = [tvLed, geladeira]
         
+        //withEnabledSuperclassSpy faz com que o mock da classe chame os metodos originais caso o mock não seja ensinado
+        let daoFalso = MockLeilaoDao().withEnabledSuperclassSpy()
         
+        //ensinando o mock
+        stub(daoFalso) { (daoFalso) in
+            when(daoFalso.correntes()).thenReturn(leiloesAntigos)
+        }
         
-        let encerradorDeLeilao = EncerradorDeLeilao(dao)
+        let encerradorDeLeilao = EncerradorDeLeilao(daoFalso)
         encerradorDeLeilao.encerra()
         
-        let leiloesEncerrados = dao.encerrados()
+        let leiloesEncerrados = daoFalso.encerrados()
         
-        XCTAssertEqual(2, leiloesEncerrados.count)
-        XCTAssertTrue(leiloesEncerrados[0].isEncerrado()!)
-        XCTAssertTrue(leiloesEncerrados[1].isEncerrado()!)
+        guard let statusTvLed = tvLed.isEncerrado() else { return }
+        guard let statusGeladeira = geladeira.isEncerrado() else { return }
+        
+        XCTAssertEqual(2, encerradorDeLeilao.getTotalEncerrados())
+        XCTAssertTrue(statusTvLed)
+        XCTAssertTrue(statusGeladeira)
     }
     
 

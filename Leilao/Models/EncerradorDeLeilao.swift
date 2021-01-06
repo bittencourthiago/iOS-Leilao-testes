@@ -11,14 +11,13 @@ import Foundation
 class EncerradorDeLeilao {
     
     private var total = 0
-    private var dao :LeilaoDaoFalso
+    private var dao:LeilaoDao
     
-    init(_ leilaoDao:LeilaoDaoFalso) {
+    init(_ leilaoDao:LeilaoDao) {
         self.dao = leilaoDao
     }
     
     func encerra() {
-        let dao = LeilaoDao()
         let todosLeiloesCorrentes = dao.correntes()
         for leilao in todosLeiloesCorrentes {
             if comecouSemanaPassada(leilao) {
