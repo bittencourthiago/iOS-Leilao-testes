@@ -11,6 +11,11 @@ import Foundation
 class EncerradorDeLeilao {
     
     private var total = 0
+    private var dao :LeilaoDaoFalso
+    
+    init(_ leilaoDao:LeilaoDaoFalso) {
+        self.dao = leilaoDao
+    }
     
     func encerra() {
         let dao = LeilaoDao()

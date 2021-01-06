@@ -22,10 +22,13 @@
 		03FA4B25209353AF0047D61B /* Lance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA4B24209353AF0047D61B /* Lance.swift */; };
 		03FA4B27209353CB0047D61B /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA4B26209353CB0047D61B /* Usuario.swift */; };
 		03FA4B29209354F50047D61B /* Leilao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA4B28209354F50047D61B /* Leilao.swift */; };
+		1E291006D57D37C68CE52CC0 /* Pods_LeilaoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F906CE216E7AFE9E2D3A743 /* Pods_LeilaoUITests.framework */; };
+		57378E3243279534F9E3B572 /* Pods_LeilaoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCE14B1EF02FB3574F23EFA /* Pods_LeilaoTests.framework */; };
 		A23F5A0F209CA483000E6525 /* Avaliador.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5A0E209CA483000E6525 /* Avaliador.swift */; };
 		A23F5A11209CD8FA000E6525 /* AvaliadorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F5A10209CD8FA000E6525 /* AvaliadorTests.swift */; };
 		A26FBA9420A32DE60090FC1F /* CriadorDeLeilao.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26FBA9320A32DE60090FC1F /* CriadorDeLeilao.swift */; };
-		F000131025A5F18000ADF3FE /* LeilaoDaoFalso.swift in Sources */ = {isa = PBXBuildFile; fileRef = F000130F25A5F18000ADF3FE /* LeilaoDaoFalso.swift */; };
+		C8A7B7027C91C80B6B717365 /* Pods_Leilao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5373D7C1ACEB8170676C18BB /* Pods_Leilao.framework */; };
+		F000131325A601C000ADF3FE /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F000131225A601C000ADF3FE /* GeneratedMocks.swift */; };
 		F0B4425D25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B4425C25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,13 +74,16 @@
 		03FA4B26209353CB0047D61B /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		03FA4B28209354F50047D61B /* Leilao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leilao.swift; sourceTree = "<group>"; };
 		0CF7CCCF5DC3FEF7719DA049 /* Pods-LeilaoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeilaoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeilaoUITests/Pods-LeilaoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5373D7C1ACEB8170676C18BB /* Pods_Leilao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leilao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BCE14B1EF02FB3574F23EFA /* Pods_LeilaoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeilaoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A02B7555041DD36E6C17E51 /* Pods-Leilao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leilao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Leilao/Pods-Leilao.debug.xcconfig"; sourceTree = "<group>"; };
+		8F906CE216E7AFE9E2D3A743 /* Pods_LeilaoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeilaoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B13E362E12E632B3A49E78 /* Pods-Leilao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leilao.release.xcconfig"; path = "Pods/Target Support Files/Pods-Leilao/Pods-Leilao.release.xcconfig"; sourceTree = "<group>"; };
 		A23F5A0E209CA483000E6525 /* Avaliador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avaliador.swift; sourceTree = "<group>"; };
 		A23F5A10209CD8FA000E6525 /* AvaliadorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliadorTests.swift; sourceTree = "<group>"; };
 		A26FBA9320A32DE60090FC1F /* CriadorDeLeilao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriadorDeLeilao.swift; sourceTree = "<group>"; };
 		C7DC0AC1610E99EB10575FA4 /* Pods-LeilaoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeilaoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeilaoUITests/Pods-LeilaoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F000130F25A5F18000ADF3FE /* LeilaoDaoFalso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeilaoDaoFalso.swift; sourceTree = "<group>"; };
+		F000131225A601C000ADF3FE /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		F0B4425C25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncerradorDeLeilaoTests.swift; sourceTree = "<group>"; };
 		F712E29B1BE9A2A8745A94E1 /* Pods-LeilaoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeilaoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeilaoTests/Pods-LeilaoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				038136C520B4896B005FEDD7 /* libsqlite3.tbd in Frameworks */,
+				C8A7B7027C91C80B6B717365 /* Pods_Leilao.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57378E3243279534F9E3B572 /* Pods_LeilaoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E291006D57D37C68CE52CC0 /* Pods_LeilaoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				038136C020B4889D005FEDD7 /* LeilaoDao.swift */,
-				F000130F25A5F18000ADF3FE /* LeilaoDaoFalso.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				A23F5A10209CD8FA000E6525 /* AvaliadorTests.swift */,
 				03FA4B0A209353290047D61B /* Info.plist */,
 				F0B4425C25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift */,
+				F000131225A601C000ADF3FE /* GeneratedMocks.swift */,
 			);
 			path = LeilaoTests;
 			sourceTree = "<group>";
@@ -223,6 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				038136C420B4896B005FEDD7 /* libsqlite3.tbd */,
+				5373D7C1ACEB8170676C18BB /* Pods_Leilao.framework */,
+				6BCE14B1EF02FB3574F23EFA /* Pods_LeilaoTests.framework */,
+				8F906CE216E7AFE9E2D3A743 /* Pods_LeilaoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,6 +268,8 @@
 				03FA4B00209353290047D61B /* Sources */,
 				03FA4B01209353290047D61B /* Frameworks */,
 				03FA4B02209353290047D61B /* Resources */,
+				D34C66E521E242E2C2D3F704 /* [CP] Embed Pods Frameworks */,
+				F000131125A5FF1C00ADF3FE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -411,6 +425,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D34C66E521E242E2C2D3F704 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LeilaoTests/Pods-LeilaoTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeilaoTests/Pods-LeilaoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F000131125A5FF1C00ADF3FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Dao/LeilaoDao.swift\" \\\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -420,7 +469,6 @@
 			files = (
 				03FA4AF3209353270047D61B /* ViewController.swift in Sources */,
 				038136C120B4889E005FEDD7 /* LeilaoDao.swift in Sources */,
-				F000131025A5F18000ADF3FE /* LeilaoDaoFalso.swift in Sources */,
 				03FA4B25209353AF0047D61B /* Lance.swift in Sources */,
 				038136CB20B48B5F005FEDD7 /* EncerradorDeLeilao.swift in Sources */,
 				03FA4AF1209353270047D61B /* AppDelegate.swift in Sources */,
@@ -440,6 +488,7 @@
 				F0B4425D25A5EA3C00710CAC /* EncerradorDeLeilaoTests.swift in Sources */,
 				03FA4B09209353290047D61B /* LeilaoTests.swift in Sources */,
 				A23F5A11209CD8FA000E6525 /* AvaliadorTests.swift in Sources */,
+				F000131325A601C000ADF3FE /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,3 +1,18 @@
-PODFILE CHECKSUM: 9732d6ecefbbff83f615a2570b2655c57ee0436c
+PODS:
+  - Cuckoo (1.2.0):
+    - Cuckoo/Swift (= 1.2.0)
+  - Cuckoo/Swift (1.2.0)
+
+DEPENDENCIES:
+  - Cuckoo (~> 1.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cuckoo
+
+SPEC CHECKSUMS:
+  Cuckoo: f5f4e7c308c512cc2dedbdce23f5dc6985cb5173
+
+PODFILE CHECKSUM: 2c6be8fb8da5512ee8a7dd8c3180d10c538477fc
 
 COCOAPODS: 1.5.2
